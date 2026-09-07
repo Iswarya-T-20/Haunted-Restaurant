@@ -1,3 +1,4 @@
+# Haunted Restaurant
 👻 Haunted Restaurant
 
 Welcome to Haunted Restaurant — a spooky and interactive restaurant website designed with a mysterious and thrilling atmosphere! 🕸️🍽️
