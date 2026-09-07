@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Hunted Restaurant</title>
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================= -->
+    <!-- Loading Screen -->
+    <!-- ================================= -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <h1>👻 HUNTED RESTAURANT</h1>
+
+            <p>Preparing your haunted feast...</p>
+
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================================= -->
+    <!-- Floating Background -->
+    <!-- ================================= -->
+
+    <div class="fog"></div>
+    <div class="fog fog2"></div>
+
+    <div class="moon"></div>
+
+    <div class="ghost ghost1">👻</div>
+    <div class="ghost ghost2">👻</div>
+
+    <div class="bat bat1">🦇</div>
+    <div class="bat bat2">🦇</div>
+    <div class="bat bat3">🦇</div>
+
+    <!-- ================================= -->
+    <!-- Navbar -->
+    <!-- ================================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+
+                👻 HUNTED RESTAURANT
+
+            </a>
+
+            <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <button id="favoriteBtn" class="btn btn-danger">
+            ❤️ Favorites
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#foods">Menu</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#special">Specials</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers">Offers</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+
+                </ul>
+
+                <input
+                    id="searchInput"
+                    class="form-control ms-lg-4 search-box"
+                    placeholder="Search Food">
+
+                <button
+                    class="cart-btn ms-lg-3"
+                    id="cartBtn">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span id="cartCount">0</span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================================= -->
+    <!-- Hero -->
+    <!-- ================================= -->
+
+    <section id="home" class="hero">
+
+        <div class="container text-center">
+
+            <h4 data-aos="fade-down">
+
+                Welcome To
+
+            </h4>
+
+            <h1 id="typing"></h1>
+
+            <p data-aos="fade-up">
+
+                Dare to taste the darkest delights prepared inside our haunted kitchen.
+
+            </p>
+
+            <a href="#foods" class="btn btn-danger hero-btn"> 🍽 Explore Menu</a>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Categories -->
+    <!-- ================================= -->
+
+    <section class="container py-5">
+
+        <h2 class="section-title">
+
+            Food Categories
+
+        </h2>
+
+        <div class="categories">
+
+            <button class="category active"
+                data-category="All">
+
+                All
+
+            </button>
+
+            <button class="category"
+                data-category="Veg">
+
+                Veg
+
+            </button>
+
+            <button class="category"
+                data-category="Non Veg">
+
+                Non Veg
+
+            </button>
+
+            <button class="category"
+                data-category="Pizza">
+
+                Pizza
+
+            </button>
+
+            <button class="category"
+                data-category="Burger">
+
+                Burger
+
+            </button>
+
+            <button class="category"
+                data-category="Dessert">
+
+                Dessert
+
+            </button>
+
+            <button class="category"
+                data-category="Drinks">
+
+                Drinks
+
+            </button>
+
+            <button class="category" data-category="Biryani">Biryani</button>
+
+            <button class="category" data-category="Chinese">Chinese</button>
+
+            <button class="category" data-category="Seafood">Seafood</button>
+
+            <button class="category" data-category="Pasta">Pasta</button>
+
+            <button class="category" data-category="Wrap">Wraps</button>
+
+            
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Today's Special -->
+    <!-- ================================= -->
+
+    <section class="container pb-5" id="special">
+
+        <h2 class="section-title">
+
+            Today's Haunted Specials
+
+        </h2>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+
+                <div class="special-card">
+
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=900"
+                        class="img-fluid">
+
+                    <div class="special-info">
+
+                        <h3>Devil's Pizza</h3>
+
+                        <p>Loaded with extra cheese and fiery toppings.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="special-card">
+
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=900"
+                        class="img-fluid">
+
+                    <div class="special-info">
+
+                        <h3>Ghost Burger</h3>
+
+                        <p>Double grilled monster burger.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="special-card">
+
+                    <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?w=900"
+                        class="img-fluid">
+
+                    <div class="special-info">
+
+                        <h3>Haunted Biryani</h3>
+
+                        <p>Our signature spicy feast.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Food Cards -->
+    <!-- ================================= -->
+
+    <section
+        class="container pb-5"
+        id="foods">
+
+        <h2 class="section-title">
+
+            Our Haunted Menu
+
+        </h2>
+
+        <div
+            class="row"
+            id="foodContainer">
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Offers -->
+    <!-- ================================= -->
+
+    <section class="offer-section" id="offers">
+
+        <div class="container text-center">
+
+            <h2>
+
+                Midnight Monster Combo
+
+            </h2>
+
+            <h3>
+
+                30% OFF
+
+            </h3>
+
+            <p>
+
+                Every Friday after 10 PM
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Reviews -->
+    <!-- ================================= -->
+
+    <section class="container py-5" id="reviews">
+
+        <h2 class="section-title">
+
+            Visitor Reviews
+
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="review">
+
+                    ⭐⭐⭐⭐⭐
+
+                    <p>
+
+                        Best horror-themed restaurant I've ever visited!
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="review">
+
+                    ⭐⭐⭐⭐⭐
+
+                    <p>
+
+                        Delicious food and amazing haunted ambience.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="review">
+
+                    ⭐⭐⭐⭐⭐
+
+                    <p>
+
+                        The Ghost Burger is unforgettable!
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- Footer -->
+    <!-- ================================= -->
+
+    <footer>
+
+        <h2>
+
+            👻 Hunted Restaurant
+
+        </h2>
+
+        <p>
+
+            Taste Before You Become The Next Victim.
+
+        </p>
+
+        <p>
+
+            © 2026 Hunted Restaurant. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+    <!-- ================================= -->
+    <!-- Cart Sidebar -->
+    <!-- ================================= -->
+
+    <div class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h3>Your Cart</h3>
+
+            <button id="closeCart">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-footer">
+
+            <h4>
+
+                Total : $<span id="totalPrice">0</span>
+
+            </h4>
+
+            <button class="btn btn-danger w-100" onclick="checkout()"> Checkout </button>
+
+            
+        </div>
+
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- JS -->
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <div id="favoriteSidebar" class="favorite-sidebar">
+
+    <div class="favorite-header">
+
+        <h3>❤️ Favorites</h3>
+
+        <button id="closeFavorite">&times;</button>
+
+    </div>
+
+    <div id="favoriteItems"></div>
+
+</div>
+    <!-- Quick View Modal -->
+<div id="quickModal" class="quick-modal">
+
+    <div class="quick-modal-content">
+
+        <span class="close-modal" onclick="closeQuickView()">&times;</span>
+
+        <img src="" alt="Food">
+
+        <h3></h3>
+
+        <p></p>
+
+        <h4 class="price"></h4>
+
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
